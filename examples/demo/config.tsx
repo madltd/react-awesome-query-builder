@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import merge from "lodash/merge";
 import {
-  BasicConfig, BasicFuncs, Utils,
+  BasicFuncs, Utils,
   // types:
   Operators, Widgets, Fields, Config, Types, Conjunctions, Settings, LocaleSettings, OperatorProximity, Funcs, 
   DateTimeFieldSettings,
@@ -10,25 +10,12 @@ import moment from "moment";
 import ru_RU from "antd/lib/locale-provider/ru_RU";
 import { ruRU } from "@material-ui/core/locale";
 
-import AntdConfig from "react-awesome-query-builder/config/antd";
-import AntdWidgets from "react-awesome-query-builder/components/widgets/antd";
 import MaterialConfig from "react-awesome-query-builder/config/material";
-const {
-  FieldSelect,
-  FieldDropdown,
-  FieldCascader,
-  FieldTreeSelect,
-} = AntdWidgets;
+
 const {simulateAsyncFetch} = Utils;
 
-const skinToConfig: Record<string, Config> = {
-  vanilla: BasicConfig,
-  antd: AntdConfig,
-  material: MaterialConfig,
-};
-
 export default (skin: string) => {
-  const InitialConfig = skinToConfig[skin] as BasicConfig;
+  const InitialConfig = MaterialConfig;
 
   const demoListValues = [
     {title: "A", value: "a"},
