@@ -54,7 +54,6 @@ export default ({items, setField, selectedKey, readonly, placeholder}) => {
       <Select
         autoWidth
         displayEmpty
-        label={placeholder}
         onChange={onChange}
         value={hasValue ? selectedKey : ""}
         disabled={readonly}

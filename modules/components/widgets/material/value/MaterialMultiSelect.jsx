@@ -40,7 +40,6 @@ export default ({listValues, value, setValue, allowCustomValues, readonly, place
       <Select multiple
         autoWidth
         displayEmpty
-        label={!readonly ? placeholder : ""}
         onChange={onChange}
         value={hasValue ? value : []}
         disabled={readonly}

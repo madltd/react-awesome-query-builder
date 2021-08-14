@@ -1,7 +1,5 @@
 import React from "react";
 import FormControl from "@material-ui/core/FormControl";
-import Checkbox from "@material-ui/core/Checkbox";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 
@@ -20,7 +18,7 @@ export default ({id, not, setNot, conjunctionOptions, setConjunction, disabled, 
         <Button 
           key={id+postfix} 
           id={id+postfix} 
-          color={checked ? "primary" : "default"} 
+          color={checked ? "primary" : "inherit"} 
           value={key} 
           onClick={onClick.bind(null, key)} 
           disabled={readonly}
@@ -31,13 +29,12 @@ export default ({id, not, setNot, conjunctionOptions, setConjunction, disabled, 
     });
   
   const renderNot = () => {
-    if (readonly && !not)
-      return null;
+    if (readonly && !not) return null;
     return (
       <Button 
         key={id}
         id={id + "__not"}
-        color={not ? "secondary" : "default"} 
+        color={not ? "secondary" : "inherit"} 
         onClick={onNotClick.bind(null, !not)} 
         disabled={readonly}
       >

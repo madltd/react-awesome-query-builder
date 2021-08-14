@@ -32,12 +32,13 @@ export default ({listValues, value, setValue, allowCustomValues, readonly, place
   
   const hasValue = value != null;
 
+  console.log('LABEL', !readonly ? (placeholder || null) : null, value);
+
   return (
     <FormControl>
       <Select
         autoWidth
         displayEmpty
-        label={!readonly ? placeholder : ""}
         onChange={onChange}
         value={hasValue ? value : ""}
         disabled={readonly}
