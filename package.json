@@ -95,7 +95,6 @@
     "@material-ui/lab": "^5.0.0-alpha.43",
     "@material-ui/styles": "^5.0.0-beta.4",
     "antd": "^4.0.0",
-    "material-ui-confirm": "^2.0.1",
     "react": "^16.8.4 || ^17.0.1",
     "react-dom": "^16.8.4 || ^17.0.1"
   },
@@ -159,7 +158,6 @@
     "karma-webpack": "^5.0.0",
     "less": "^4.1.1",
     "less-loader": "^10.0.0",
-    "material-ui-confirm": "^2.1.2",
     "mini-css-extract-plugin": "^2.2.0",
     "mocha": "^9.0.0",
     "moment-locales-webpack-plugin": "^1.2.0",
