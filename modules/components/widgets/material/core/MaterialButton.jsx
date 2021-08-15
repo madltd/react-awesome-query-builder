@@ -17,9 +17,9 @@ export default ({type, label, onClick, config}) => {
     "addGroup": <AddIcon />,
   };
   const typeToColor = {
-    "addRule": "inherit",
-    "addRuleGroup": "inherit",
-    "addRuleGroupExt": "inherit",
+    "addRule": null,
+    "addRuleGroup": null,
+    "addRuleGroupExt": null,
     "addGroup": "primary",
     "delGroup": "secondary",
     "delRuleGroup": "secondary",
@@ -27,7 +27,7 @@ export default ({type, label, onClick, config}) => {
   };
 
   if (typeToOnlyIcon[type])
-    return <IconButton size="small" onClick={onClick}>{typeToOnlyIcon[type]}</IconButton>;
+    return <IconButton size="small" onClick={onClick} color={typeToColor[type]}>{typeToOnlyIcon[type]}</IconButton>;
   else
-    return <Button size="small" onClick={onClick} startIcon={typeToIcon[type]}>{label}</Button>;
+    return <Button size="small" onClick={onClick} color={typeToColor[type]} startIcon={typeToIcon[type]}>{label}</Button>;
 };
