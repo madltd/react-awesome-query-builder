@@ -30,7 +30,7 @@ import MaterialValueSources from "./core/MaterialValueSources";
 import MaterialConfirm from "./core/MaterialConfirm";
 
 // provider
-const MaterialProvider = ({config, children}) => {
+const MaterialProvider = ({ config, children }) => {
   const settingsTheme = config.settings.theme || {};
   const settingsLocale = config.settings.locale || {};
   const themeConfig = settingsTheme.material;
