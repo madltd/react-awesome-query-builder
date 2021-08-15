@@ -2,7 +2,6 @@ import React from "react";
 import AdapterDateFns from '@material-ui/lab/AdapterMoment';
 import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-import { ConfirmProvider, useConfirm } from "material-ui-confirm";
 
 
 // value widgets
@@ -27,7 +26,6 @@ import MaterialButton from "./core/MaterialButton";
 import MaterialButtonGroup from "./core/MaterialButtonGroup";
 import MaterialConjs from "./core/MaterialConjs";
 import MaterialValueSources from "./core/MaterialValueSources";
-import MaterialConfirm from "./core/MaterialConfirm";
 
 // provider
 const MaterialProvider = ({ config, children }) => {
@@ -41,9 +39,7 @@ const MaterialProvider = ({ config, children }) => {
   const base = (<div className="mui">{children}</div>);
   const withProviders = (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <ConfirmProvider>
-        {base}
-      </ConfirmProvider>
+      {base}
     </LocalizationProvider>
   );
   const withTheme = theme ? (
@@ -76,8 +72,6 @@ export default {
   MaterialButtonGroup,
   MaterialConjs,
   MaterialValueSources,
-  MaterialConfirm,
-  MaterialUseConfirm: useConfirm,
 
   MaterialProvider,
 };
