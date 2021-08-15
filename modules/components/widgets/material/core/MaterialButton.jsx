@@ -26,8 +26,10 @@ export default ({type, label, onClick, config}) => {
     "delRule": "secondary",
   };
 
+  // color={typeToColor[type]}
+
   if (typeToOnlyIcon[type])
-    return <IconButton size="small" onClick={onClick} color={typeToColor[type]}>{typeToOnlyIcon[type]}</IconButton>;
+    return <IconButton size="small" onClick={onClick}>{typeToOnlyIcon[type]}</IconButton>;
   else
-    return <Button size="small" onClick={onClick} color={typeToColor[type]} startIcon={typeToIcon[type]}>{label}</Button>;
+    return <Button size="small" onClick={onClick} startIcon={typeToIcon[type]}>{label}</Button>;
 };
