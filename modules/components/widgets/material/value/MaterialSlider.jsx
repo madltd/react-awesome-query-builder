@@ -82,12 +82,7 @@ export default (props) => {
     alignItems: "center"
   };
 
-  const stylesInputWrapper = {
-    marginLeft: "5px",
-  };
-
   const stylesSliderWrapper = {
-    marginLeft: "5px", 
     paddingLeft: "12px", 
     marginBottom: muiMarks && "-16px", 
     width: width || defaultSliderWidth,
@@ -95,10 +90,8 @@ export default (props) => {
 
   return (
     <FormControl>
-      <div style={stylesWrapper}>
-        <div style={stylesInputWrapper}>
-          {InputCmp}
-        </div>
+      <div style={stylesWrapper} className="widget--inner">
+        {InputCmp}
         <div style={stylesSliderWrapper}>
           {SliderCmp}
         </div>

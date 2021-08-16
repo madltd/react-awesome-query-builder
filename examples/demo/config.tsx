@@ -7,9 +7,6 @@ export default (skin: string) => {
       qty: {
         label: 'Qty',
         type: 'number',
-        fieldSettings: {
-          min: 0,
-        },
         valueSources: ['value'],
         preferWidgets: ['number'],
       },
@@ -17,11 +14,7 @@ export default (skin: string) => {
         label: 'Price',
         type: 'number',
         valueSources: ['value'],
-        fieldSettings: {
-          min: 10,
-          max: 100,
-        },
-        preferWidgets: ['slider', 'rangeslider'],
+        preferWidgets: ['number'],
       },
       color: {
         label: 'Color',

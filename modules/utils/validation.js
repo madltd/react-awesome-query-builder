@@ -30,6 +30,7 @@ export const validateTree = (tree, _oldTree, config, oldConfig, removeEmptyGroup
 };
 
 function validateItem (item, path, itemId, meta, c) {
+  console.log('ITEM', item);
   const type = item.get("type");
   const children = item.get("children1");
 

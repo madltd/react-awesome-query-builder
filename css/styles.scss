@@ -81,6 +81,17 @@ body.qb-dragging {
   border: 1px solid #e0a1a1;
 }
 
+.rule--body {
+  display: flex;
+  & > :not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
+
+.widget--inner > :not(:first-child) {
+  margin-left: 0.5rem;
+}
+
 .rule--body--wrapper {
   flex: 1;
   display: flex;
@@ -243,6 +254,8 @@ ul.ant-select-selection__rendered {
   top: 3px;
 }
 .group--conjunctions {
+  display: flex;
+  align-items: center;
   .group--drag-handler {
     margin-left: 10px;
   }
@@ -360,22 +373,7 @@ ul.ant-select-selection__rendered {
   margin-right: 8px;
 }
 
-$rule_items: ".rule--field", ".group--field", ".rule--operator", ".rule--value", ".rule--operator-options", ".rule--widget", 
- ".widget--widget", ".widget--valuesrc", ".widget--sep", ".operator--options--sep",
- ".rule--before-widget", ".rule--after-widget";
- 
-$seps: ".widget--sep", ".operator--options--sep", ".rule--func--bracket-before", ".rule--func--bracket-after", ".rule--func--arg-sep";
-
-#{$rule_items} {
-  display: inline-block;
-}
-
 .mui {
-  #{$seps} {
-    vertical-align: bottom;
-    align-self: flex-end;
-    margin-bottom: 8px;
-  }
   .rule--operator-options {
     vertical-align: bottom;
   }
@@ -384,9 +382,9 @@ $seps: ".widget--sep", ".operator--options--sep", ".rule--func--bracket-before",
   }
 }
 
-.rule--operator, .widget--widget, .widget--valuesrc, .widget--sep {
-  margin-left: 10px;
-}
+// .rule--operator, .widget--widget, .widget--valuesrc, .widget--sep {
+//   margin: 0 10px;
+// }
 .widget--valuesrc {
   margin-right: -8px;
 }

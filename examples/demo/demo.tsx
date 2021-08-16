@@ -11,21 +11,13 @@ const config = {
     qty: {
       label: 'Qty',
       type: 'number',
-      fieldSettings: {
-        min: 0,
-      },
-      valueSources: ['value'],
-      preferWidgets: ['number'],
+      valueSources: ['value']
     },
     price: {
       label: 'Price',
       type: 'number',
       valueSources: ['value'],
-      fieldSettings: {
-        min: 10,
-        max: 100,
-      },
-      preferWidgets: ['slider', 'rangeslider'],
+      preferWidgets: ['number'],
     },
     color: {
       label: 'Color',
@@ -54,9 +46,11 @@ interface DemoQueryBuilderState {
   config: any;
 }
 
+const queryValue: any = { "id": QbUtils.uuid(), "type": "group" };
+
 export default class DemoQueryBuilder extends Component<{}, DemoQueryBuilderState> {
   state = {
-    tree: { "id": QbUtils.uuid(), "type": "group" },
+    tree: QbUtils.checkTree(QbUtils.loadTree(queryValue), config),
     config
   }
 
@@ -65,7 +59,7 @@ export default class DemoQueryBuilder extends Component<{}, DemoQueryBuilderStat
   };
 
   renderBuilder = (props) => (
-    <div className="query-builder-container" style={{ padding: '10px' }}>
+    <div className="query-builder-container">
       <div className="query-builder qb-lite">
         <Builder {...props} />
       </div>

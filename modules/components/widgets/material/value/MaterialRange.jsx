@@ -4,8 +4,8 @@ import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
 
 export default (props) => {
-  const {config, placeholders, customProps, value, setValue, min, max, step, marks, readonly, textSeparators} = props;
-  const {defaultSliderWidth} = config.settings;
+  const { config, placeholders, customProps, value, setValue, min, max, step, marks, readonly, textSeparators } = props;
+  const { defaultSliderWidth } = config.settings;
 
   useEffect(() => {
     const [valueFrom, valueTo] = props.value || [undefined, undefined];
@@ -57,12 +57,12 @@ export default (props) => {
     }
   };
 
-  const {width, ...rest} =  customProps || {};
+  const { width, ...rest } = customProps || {};
   const customInputProps = rest.input || {};
   const customSliderProps = rest.slider || rest;
 
   // marks example: { 0: "0%", 100: React.createElement('strong', null, "100%") }
-  const muiMarks = marks ? Object.keys(marks).map(v => ({value: v, label: marks[v]})) : false;
+  const muiMarks = marks ? Object.keys(marks).map(v => ({ value: v, label: marks[v] })) : false;
 
   // TIP: Can't pass undefined to MUI, cause it means uncontrolled component use.
   //      For empty value input needs "", slider needs null or 0, but null will cause problems with range mode
@@ -76,10 +76,10 @@ export default (props) => {
     valueTo = "";
     sliderValue[1] = 0;
   }
-  
+
 
   const FromInputCmp = (
-    <TextField 
+    <TextField
       type="number"
       value={valueFrom}
       placeholder={placeholders[0]}
@@ -99,7 +99,7 @@ export default (props) => {
   );
 
   const ToInputCmp = (
-    <TextField 
+    <TextField
       type="number"
       value={valueTo}
       placeholder={placeholders[1]}
@@ -119,7 +119,7 @@ export default (props) => {
   );
 
   const SliderCmp = (
-    <Slider 
+    <Slider
       value={sliderValue}
       onChange={handleSliderChange}
       disabled={readonly}
@@ -133,32 +133,24 @@ export default (props) => {
   );
 
   const stylesWrapper = {
-    display: "inline-flex", 
-  };
-
-  const stylesInputWrapper = {
-    marginLeft: "5px",
+    display: "inline-flex",
+    alignItems: "center"
   };
 
   const stylesSliderWrapper = {
-    marginLeft: "5px", 
-    paddingLeft: "12px", 
-    marginBottom: muiMarks && "-16px", 
+    paddingLeft: "12px",
+    marginBottom: muiMarks && "-16px",
     width: width || defaultSliderWidth,
   };
 
   return (
     <FormControl>
-      <div style={stylesWrapper}>
-        <div style={stylesInputWrapper}>
-          {FromInputCmp}
-        </div>
+      <div style={stylesWrapper} className="widget--inner">
+        {FromInputCmp}
         <div className={"widget--sep"}>
-          <span>{ textSeparators[1] }</span>
+          <span>{textSeparators[1]}</span>
         </div>
-        <div style={stylesInputWrapper}>
-          {ToInputCmp}
-        </div>
+        {ToInputCmp}
         <div style={stylesSliderWrapper}>
           {SliderCmp}
         </div>
