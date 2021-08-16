@@ -1,7 +1,7 @@
 import React from "react";
-import { TimePicker } from "@material-ui/lab";
 import moment from "moment";
-import FormControl from "@material-ui/core/FormControl";
+import { TimePicker } from "@material-ui/lab";
+import { FormControl, TextField } from "@material-ui/core";
 
 export default (props) => {
   const {value, setValue, use12Hours, readonly, placeholder, timeFormat, valueFormat, customProps, useKeyboard} = props;
@@ -28,6 +28,7 @@ export default (props) => {
         value={timeValue || null}
         onChange={handleChange}
         views={hasSeconds ? ["hours", "minutes", "seconds"] : ["hours", "minutes"]}
+        renderInput={(params) => <TextField {...params} />}
         {...customProps}
       />
     </FormControl>

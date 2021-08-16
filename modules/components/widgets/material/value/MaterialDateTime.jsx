@@ -1,6 +1,6 @@
 import React from "react";
 import { DateTimePicker } from "@material-ui/lab";
-import FormControl from "@material-ui/core/FormControl";
+import { FormControl, TextField } from "@material-ui/core";
 
 export default (props) => {
   const {value, setValue, use12Hours, readonly, placeholder, dateFormat, timeFormat, valueFormat, customProps, useKeyboard} = props;
@@ -25,6 +25,7 @@ export default (props) => {
         format={dateTimeFormat}
         value={value || null}
         onChange={handleChange}
+        renderInput={(params) => <TextField {...params} />}
         {...customProps}
       />
     </FormControl>
