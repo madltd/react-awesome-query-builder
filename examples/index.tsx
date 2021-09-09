@@ -1,7 +1,7 @@
 import React from "react";
 import { hot } from "react-hot-loader/root";
 import { AppContainer } from "react-hot-loader";
-import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ReactDOM from "react-dom";
 import Demo from "./demo/demo";
 

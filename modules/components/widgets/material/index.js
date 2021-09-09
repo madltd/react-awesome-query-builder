@@ -1,7 +1,7 @@
 import React from "react";
-import AdapterDateFns from '@material-ui/lab/AdapterMoment';
-import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
-import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+import AdapterDateFns from '@mui/lab/AdapterMoment';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 
 // value widgets

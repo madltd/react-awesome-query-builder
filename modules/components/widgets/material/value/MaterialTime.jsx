@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
-import { TimePicker } from "@material-ui/lab";
-import { FormControl, TextField } from "@material-ui/core";
+import { TimePicker } from "@mui/lab";
+import { FormControl, TextField } from "@mui/material";
 
 export default (props) => {
   const {value, setValue, use12Hours, readonly, placeholder, timeFormat, valueFormat, customProps, useKeyboard} = props;

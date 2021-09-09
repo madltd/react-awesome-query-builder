@@ -7,7 +7,7 @@ import {
   Operators, Widgets, Fields, Config, Types, Conjunctions, Settings, LocaleSettings, Funcs,
 } from "react-awesome-query-builder";
 import ru_RU from "antd/lib/locale-provider/ru_RU";
-import { ruRU } from "@material-ui/core/locale";
+import { ruRU } from "@mui/material/locale";
 import AntdConfig from "react-awesome-query-builder/lib/config/antd";
 import AntdWidgets from "react-awesome-query-builder/lib/components/widgets/antd";
 import MaterialConfig from "react-awesome-query-builder/lib/config/material";

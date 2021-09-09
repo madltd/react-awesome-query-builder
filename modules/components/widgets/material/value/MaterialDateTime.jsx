@@ -1,6 +1,6 @@
 import React from "react";
-import { DateTimePicker } from "@material-ui/lab";
-import { FormControl, TextField } from "@material-ui/core";
+import { DateTimePicker } from "@mui/lab";
+import { FormControl, TextField } from "@mui/material";
 
 export default (props) => {
   const {value, setValue, use12Hours, readonly, placeholder, dateFormat, timeFormat, valueFormat, customProps, useKeyboard} = props;
