@@ -11,4 +11,5 @@ const Utils = {...BasicUtils, ...Export, ...Import};
 export {Widgets, Operators, Utils, Export, Import, BasicFuncs};
 
 export {default as BasicConfig} from "./config/basic";
+export {default as MaterialConfig} from "./config/material";
 

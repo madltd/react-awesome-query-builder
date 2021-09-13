@@ -860,5 +860,6 @@ export const Utils: Utils;
 export const Query: Query;
 export const Builder: Builder;
 export const BasicConfig: BasicConfig;
+export const MaterialConfig: any;
 export const BasicFuncs: Funcs;
 export const Widgets: ReadyWidgets;
